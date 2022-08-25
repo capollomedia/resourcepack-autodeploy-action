@@ -10,7 +10,7 @@ const axios = require('axios');
             var url = core.getInput("packURL");
             core.info('Sending resourcepack to server with ip ' +serverIP +" and key " +serverKey +"...");
             axios
-            .get(serverIP +'/updatepack/' +url)
+            .get("http://" +serverIP +'/updatepack/' +url)
             .then(res => {
                 core.info('ServerResourcpackDeployManager responded with' +res.status);
                 core.info(res);
