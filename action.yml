@@ -3,3 +3,13 @@ description: "Action for automatically deploying resourcepacks into our Minecraf
 runs:
   using: node12
   main: action.js
+inputs:
+  serverIP:
+    description: 'IP of the server you are deploying the resourcepack to'
+    required: true
+  serverKey:
+    description: 'Key of the ServerResourcepackDeploymentManager plugin'
+    required: true
+  packURL:
+    description: 'URL of the resourcepack'
+    required: true
