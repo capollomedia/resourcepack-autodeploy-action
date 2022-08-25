@@ -1,0 +1,5 @@
+name: "Deploy Resourcepack to Server Action"
+description: "Action for automatically deploying resourcepacks into our Minecraft servers"
+runs:
+  using: node12
+  main: action.js
