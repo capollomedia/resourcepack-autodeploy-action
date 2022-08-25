@@ -9,12 +9,12 @@ const axios = require('axios');
             var serverKey = core.getInput("serverKey");
             var url = core.getInput("packURL");
             
-            core.notice('Sending resourcepack to server with ip' +serverIP +" and key " +serverKey +"...");
+            core.info('Sending resourcepack to server with ip' +serverIP +" and key " +serverKey +"...");
             axios
             .get(serverIP +'/updatepack/' +url)
             .then(res => {
-                core.notice('ServerResourcpackDeployManager responded with' +res.status);
-                core.notice(res);
+                core.info('ServerResourcpackDeployManager responded with' +res.status);
+                core.info(res);
             })           
 
         } catch {
