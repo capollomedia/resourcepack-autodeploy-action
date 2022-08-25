@@ -8,7 +8,7 @@ const axios = require('axios');
             var serverIP = core.getInput("serverIP");
             var serverKey = core.getInput("serverKey");
             var url = core.getInput("packURL");
-            core.info('Sending resourcepack to server with ip' +serverIP +" and key " +serverKey +"...");
+            core.info('Sending resourcepack to server with ip ' +serverIP +" and key " +serverKey +"...");
             axios
             .get(serverIP +'/updatepack/' +url)
             .then(res => {
