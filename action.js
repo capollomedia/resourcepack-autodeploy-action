@@ -14,7 +14,8 @@ const axios = require('axios');
             .then(res => {
                 core.info('ServerResourcpackDeployManager responded with' +res.status);
                 core.info(res);
-            });
+            })
+            .catch(error => core.setFailed(error.message));
         } catch (error) {
             core.setFailed(error.message);
         }
